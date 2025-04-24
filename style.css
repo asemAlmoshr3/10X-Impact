@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -15,7 +14,7 @@ h1 {
   text-shadow: 2px 2px 5px red;
 }
 
-.video-container {
+.video {
   margin-top: 20px;
   box-shadow: 0 0 15px red;
   display: inline-block;
@@ -44,6 +43,7 @@ button:hover {
 }
 
 .footer {
-  margin-top: 20px;
+  margin-top: 30px;
   font-size: 16px;
+  color: #eee;
 }
