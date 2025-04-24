@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="فيلم الرعب: THE TENTH">
-  <meta property="og:image" content="https://raw.githubusercontent.com/asemAlmoshr3/THETENTH/main/assets/halloween-6880.gif">
-  <meta property="og:description" content="شاهد فيلم الرعب السعودي العاشرة... مو كل اللي جنبك بشر 👹">
-  <title>فيلم THE TENTH</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فيلم الرعب: THETENTH</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>🎬 فيلم الرعب: <span style="color: #ff0000">THETENTH</span></h1>
+  <h1 class="title">🎬 فيلم الرعب: <span>THETENTH</span></h1>
   <div class="video-container">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oa9dihhaUFs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
   <div class="buttons">
-    <button class="btn" onclick="shareOnFacebook()">👻 شارك الرعب على فيسبوك</button>
-    <button class="btn" onclick="alert('🔥 شكراً على الإعجاب!')">❤️ أعجبني رغم الرعب</button>
-    <button class="btn" onclick="alert('🔪 دمّرتنا!')">🩸 عطني عن الفيلم</button>
+    <button onclick="shareOnFacebook()">👻 شارك الرعب على فيسبوك</button>
+    <button onclick="shareOnX()">👹 شارك على X (تويتر سابقًا)</button>
+    <button onclick="rateHorror()">💀 قيّم رعب الفيلم</button>
+    <button onclick="reveal()">🩸 عطِني عن الفيلم</button>
+    <button onclick="supportCreator()">❤️ ادعم صانع الفيلم</button>
   </div>
-  <div class="footer">
-    👁️‍🗨️ عدد الزوار: <span id="counter">95</span><br>
-    🖤 عاصم يحب اليتا
-  </div>
-
+  <p class="counter">👁️ عدد الزوار: <span id="visit-count">0</span></p>
+  <p class="love">🖤  دعمنا بحبك  </p>
   <script>
+    let count = localStorage.getItem('visits') || 0;
+    count++;
+    localStorage.setItem('visits', count);
+    document.getElementById('visit-count').innerText = count;
+
     function shareOnFacebook() {
-      const url = encodeURIComponent("https://asemalmoshr3.github.io/THETENTH/");
-      const text = encodeURIComponent("شاهد فيلم العاشرة 🧠 فيلم يعطيك إحساس مختلف #العاشرة");
-      window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank');
+      window.open('https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/oa9dihhaUFs', '_blank');
+    }
+
+    function shareOnX() {
+      const tweetText = encodeURIComponent('شاهد فيلم العاشرة 🎥 فيلم رعب مختلف يعطيك إحساس ما يُنسى! #العاشرة https://youtu.be/oa9dihhaUFs');
+      window.open(`https://twitter.com/intent/tweet?text=${tweetText}`, '_blank');
+    }
+
+    function rateHorror() {
+      alert('شكراً لتقييمك! تم تسجيل رعبك 🩸');
+    }
+
+    function reveal() {
+      alert('فيلم العاشرة مستوحى من أحداث نفسية مرعبة قد تحدث لأي شخص... حتى أنت.');
+    }
+
+    function supportCreator() {
+      window.open('https://instagram.com/asem.almoshrea', '_blank');
     }
   </script>
 </body>
