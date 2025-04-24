@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: url('assets/halloween-6880.gif') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-top: 30px;
+  color: red;
+  text-shadow: 2px 2px 8px black;
+}
+
+.video-container {
+  margin: 30px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn {
+  background-color: #fcd200;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff0000;
+  color: white;
+  transform: scale(1.05);
+}
+
+.footer {
+  margin-top: 40px;
+  font-size: 16px;
+  color: #ddd;
+  text-shadow: 0 0 5px black;
+}
