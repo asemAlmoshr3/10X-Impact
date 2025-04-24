@@ -56,6 +56,7 @@
       color: #555;
     }
   </style>
+  <script src="https://apis.google.com/js/platform.js"></script>
 </head>
 <body>
   <h1>🎬 فيلم العاشرة</h1>
@@ -65,27 +66,33 @@
     <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
   </div>
 
-  <button class="cta-button" onclick="shareFB()">مشاركة على فيسبوك</button>
-  <button class="cta-button" onclick="likeFB()">إعجاب</button>
+  <button class="cta-button" onclick="shareFB()">🔁 مشاركة على فيسبوك</button>
+  <button class="cta-button" onclick="likeFB()">❤️ إعجاب رمزي</button>
+  <button class="cta-button" onclick="tweetNow()">🐦 غرّد عن الفيلم</button>
 
   <div id="viewCounter">عدد الزيارات: <span id="counter">0</span></div>
 
+  <div class="g-ytsubscribe" data-channelid="UCxxxxxxxxxxxxxxxx" data-layout="default" data-count="default"></div>
+
   <div class="footer">
-    مشروع 10X Impact – دعمك يفتح أبواب الحكاية 🎥
+    مشروع 10X Impact – دعمك يفتح أبواب الحكاية 🎥<br>
+    عاصم يحب اليتا 💛
   </div>
 
   <script>
-    // مشاركة فيسبوك
     function shareFB() {
       window.open("https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/oa9dihhaUFs", "_blank");
     }
 
-    // زر إعجاب وهمي
     function likeFB() {
       alert("❤️ تم تسجيل إعجابك بالفيلم! شكراً لدعمك");
     }
 
-    // عداد مشاهدات محلية باستخدام LocalStorage
+    function tweetNow() {
+      const tweet = encodeURIComponent("🎬 فيلم العاشرة... لحظة غيرت كل شيء. أكثر من 120 ألف مشاهدة خلال أيام! هل التقنية تقرّبنا؟ أم تعزلنا؟ #العاشرة #10XImpact https://youtu.be/oa9dihhaUFs");
+      window.open("https://twitter.com/intent/tweet?text=" + tweet, "_blank");
+    }
+
     window.onload = function () {
       let views = localStorage.getItem("visit_count") || 0;
       views++;
