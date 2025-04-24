@@ -1,114 +1,68 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THETENTH – فيلم العاشرة</title>
-  <meta property="og:title" content="THETENTH – مو كل اللي جنبك بشر" />
-  <meta property="og:description" content="فيلم رعب سعودي قصير يجعلك تعيد التفكير… شاهد الآن." />
-  <meta property="og:image" content="https://asemalmoshr3.github.io/THETENTH/og.jpg" />
-  <meta property="og:type" content="website" />
+  <title>THETENTH | فيلم الرعب</title>
   <style>
     body {
       margin: 0;
       font-family: 'Cairo', sans-serif;
-      color: #fff;
-      text-align: center;
-      background: #000 url('https://i.imgur.com/N9ZsrOY.jpg') no-repeat center center fixed;
+      background: url('https://cdn.pixabay.com/animation/2022/10/18/13/35/13-35-00-105_512.gif') no-repeat center center fixed;
       background-size: cover;
+      color: white;
+      text-align: center;
     }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.4);
-      animation: flashEffect 4s infinite;
-      z-index: -1;
-    }
-
-    @keyframes flashEffect {
-      0%, 100% { opacity: 0.4; }
-      50% { opacity: 0.15; }
-    }
-
     h1 {
-      font-size: 36px;
-      color: #ff0000;
-      text-shadow: 2px 2px 6px black;
-      margin-top: 40px;
+      font-size: 2.5em;
+      margin-top: 20px;
+      color: red;
+      text-shadow: 0 0 10px black;
     }
-
-    .video-wrapper {
-      max-width: 700px;
-      margin: 30px auto;
-      box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
-      border-radius: 10px;
-      overflow: hidden;
+    .buttons {
+      margin-top: 20px;
     }
-
-    .btn {
-      background-color: #fcd200;
-      color: #000;
-      font-weight: bold;
-      padding: 12px 20px;
-      margin: 10px;
+    button {
+      background: gold;
+      color: black;
       border: none;
+      padding: 10px 20px;
+      margin: 5px;
       border-radius: 8px;
-      cursor: pointer;
       font-size: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-      transition: 0.3s;
+      cursor: pointer;
+      box-shadow: 0 0 5px #000;
     }
-
-    .btn:hover {
-      background-color: #ff0000;
-      color: #fff;
-      transform: scale(1.05);
+    iframe {
+      margin-top: 20px;
+      box-shadow: 0 0 20px black;
+      border-radius: 8px;
     }
-
     .footer {
-      margin-top: 40px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #aaa;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #ccc;
+      text-shadow: 0 0 5px black;
     }
   </style>
 </head>
 <body>
-
-  <h1>🎬 فيلم الرعب: THETENTH</h1>
-
-  <div class="video-wrapper">
-    <iframe width="100%" height="400" src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
+  <h1>🎬 فيلم الرعب: <span style="color:red">THETENTH</span></h1>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
+  <div class="buttons">
+    <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://www.youtube.com/watch?v=oa9dihhaUFs', '_blank')">👻 شارك الرعب على فيسبوك</button>
+    <button onclick="alert('😱 أعجبني رغم الرعب!')">❤️ أعجبني رغم الرعب</button>
+    <button onclick="alert('🎬 غمّز عن الفيلم!')">🩸 غمّز عن الفيلم</button>
+  </div>
+  <div class="footer">
+    👁️‍🗨️ عدد الزوار: <span id="visits">0</span><br>
+    ❤️ عاصم يحب أليتا
   </div>
 
-  <button class="btn" onclick="shareFacebook()">👻 شارك الرعب على فيسبوك</button>
-  <button class="btn" onclick="likeFilm()">❤️ أعجبني رغم الرعب</button>
-  <button class="btn" onclick="alert('🧛‍♂️ انشر الفيلم!')">🩸 غرّد عن الفيلم</button>
-
-  <div class="footer">عدد الزوار: <span id="counter">0</span> 👀</div>
-  <div class="footer">عاصم يحب اليتا 🖤</div>
-
   <script>
-    function shareFacebook() {
-      const text = encodeURIComponent('شاهد فيلم العاشرة 🎥 فيلم يعطيك إحساس مختلف! #العاشرة');
-      const url = encodeURIComponent('https://youtu.be/oa9dihhaUFs');
-      const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`;
-      window.open(fbUrl, '_blank');
-    }
-
-    function likeFilm() {
-      alert('❤️ تم تسجيل إعجابك بالفيلم!');
-    }
-
-    let count = localStorage.getItem("visitCount") || 0;
-    count++;
-    localStorage.setItem("visitCount", count);
-    document.getElementById("counter").innerText = count;
+    let visits = localStorage.getItem('visits') || 0;
+    visits++;
+    localStorage.setItem('visits', visits);
+    document.getElementById('visits').innerText = visits;
   </script>
 </body>
 </html>
