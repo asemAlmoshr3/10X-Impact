@@ -2,103 +2,75 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>10X Impact – فيلم العاشرة</title>
+  <title>🎬 العاشرة | فيلم قصير</title>
   <style>
     body {
       font-family: 'Cairo', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #fdfdfd;
       color: #222;
       text-align: center;
-      padding: 40px 20px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-    .video-container {
-      position: relative;
-      width: 100%;
-      max-width: 720px;
-      margin: 0 auto 20px auto;
+      padding: 20px;
     }
     iframe {
-      width: 100%;
+      width: 90%;
       height: 400px;
-      border-radius: 10px;
+      max-width: 700px;
+      border-radius: 12px;
+      border: 3px solid black;
+      margin-bottom: 30px;
     }
-    .cta-button {
-      background-color: #ffcc00;
-      color: #000;
+    .button {
+      display: inline-block;
+      margin: 10px;
       padding: 12px 24px;
-      font-size: 16px;
       border: none;
-      border-radius: 6px;
+      border-radius: 8px;
+      font-size: 16px;
       font-weight: bold;
       cursor: pointer;
-      margin: 5px;
+      background-color: #ffcc00;
+      transition: 0.2s;
     }
-    .cta-button:hover {
+    .button:hover {
       background-color: #e6b800;
     }
-    .footer {
-      margin-top: 30px;
-      font-size: 14px;
-      color: #888;
-    }
-    #viewCounter {
-      margin-top: 15px;
+    #counter {
+      margin-top: 20px;
+      font-weight: bold;
       font-size: 16px;
-      color: #555;
     }
   </style>
-  <script src="https://apis.google.com/js/platform.js"></script>
 </head>
 <body>
+
   <h1>🎬 فيلم العاشرة</h1>
-  <p>كل مشاهدة... كل مشاركة... تكتب بداية جديدة لنجاح سعودي مستقل.</p>
+  <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
 
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
+  <div>
+    <button class="button" onclick="shareOnFacebook()">📘 مشاركة على فيسبوك</button>
+    <button class="button" onclick="alert('أعجبك الفيلم؟ شكراً لدعمك!')">❤️ إعجاب رمزي!</button>
+    <button class="button" onclick="alert('شارك الفيلم مع أصدقائك ✨')">📣 غرد عن الفيلم</button>
   </div>
 
-  <button class="cta-button" onclick="shareFB()">🔁 مشاركة على فيسبوك</button>
-  <button class="cta-button" onclick="likeFB()">❤️ إعجاب رمزي</button>
-  <button class="cta-button" onclick="tweetNow()">🐦 غرّد عن الفيلم</button>
-
-  <div id="viewCounter">عدد الزيارات: <span id="counter">0</span></div>
-
-  <div class="g-ytsubscribe" data-channelid="UCxxxxxxxxxxxxxxxx" data-layout="default" data-count="default"></div>
-
-  <div class="footer">
-    مشروع 10X Impact – دعمك يفتح أبواب الحكاية 🎥<br>
-    عاصم يحب اليتا 💛
-  </div>
+  <div id="counter"></div>
 
   <script>
-    function shareFB() {
-      window.open("https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/oa9dihhaUFs", "_blank");
-    }
-
-    function likeFB() {
-      alert("❤️ تم تسجيل إعجابك بالفيلم! شكراً لدعمك");
-    }
-
-    function tweetNow() {
-      const tweet = encodeURIComponent("🎬 فيلم العاشرة... لحظة غيرت كل شيء. أكثر من 120 ألف مشاهدة خلال أيام! هل التقنية تقرّبنا؟ أم تعزلنا؟ #العاشرة #10XImpact https://youtu.be/oa9dihhaUFs");
-      window.open("https://twitter.com/intent/tweet?text=" + tweet, "_blank");
-    }
-
     window.onload = function () {
-      let views = localStorage.getItem("visit_count") || 0;
-      views++;
-      localStorage.setItem("visit_count", views);
-      document.getElementById("counter").innerText = views;
+      let visits = localStorage.getItem("tenth_visits");
+      if (!visits) {
+        visits = 1;
+      } else {
+        visits = parseInt(visits) + 1;
+      }
+      localStorage.setItem("tenth_visits", visits);
+      document.getElementById("counter").innerText = "عدد الزيارات: " + visits;
+    };
+
+    function shareOnFacebook() {
+      let postText = encodeURIComponent("شاهد فيلم العاشرة 🎬 يعطيك إحساس مختلف \n#العاشرة\nhttps://youtu.be/oa9dihhaUFs");
+      window.open(`https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/oa9dihhaUFs&quote=${postText}`);
     }
   </script>
+
 </body>
 </html>
