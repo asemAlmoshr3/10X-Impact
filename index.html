@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE TENTH</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>📽️ فيلم الرعب: <span style="color:red">THETENTH</span></h1>
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/oa9dihhaUFs" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div class="buttons">
+    <button onclick="shareOnFacebook()">👻 شارك الرعب على فيسبوك</button>
+    <button onclick="shareOnX()">🧛‍♂️ شارك على X (تويتر سابقًا)</button>
+    <button onclick="alert('شكراً على تقييمك!')">🩸 قيّم رعب الفيلم</button>
+    <button onclick="alert('الفيلم مستوحى من أحداث نفسية مرعبة 🎬')">🩸 عطني عن الفيلم</button>
+    <button onclick="alert('تم ❤️ شكراً لدعمك!')">❤️ ادعم صانع الفيلم</button>
+  </div>
+  <div class="footer">
+    👁️ عدد الزوار: <span id="counter">17</span><br />
+    ❤️ عاصم يحب أليتا
+  </div>
+  <script>
+    function shareOnFacebook() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent("شاهد فيلم العاشرة 🎬 فيلم رعب يعطيك إحساس مختلف! #العاشرة https://youtu.be/oa9dihhaUFs");
+      window.open("https://www.facebook.com/sharer/sharer.php?u=" + url + "&quote=" + text, "_blank");
+    }
+    function shareOnX() {
+      const text = encodeURIComponent("شاهد فيلم العاشرة 🎬 فيلم رعب يعطيك إحساس مختلف! #العاشرة https://youtu.be/oa9dihhaUFs");
+      window.open("https://twitter.com/intent/tweet?text=" + text, "_blank");
+    }
+  </script>
+</body>
+</html>
