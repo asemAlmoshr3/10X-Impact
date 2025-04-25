@@ -2,58 +2,31 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>فيلم العاشرة | THE TENTH</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Tajawal', sans-serif;
-      text-align: center;
-      padding: 20px;
-    }
-    iframe {
-      width: 90%;
-      height: 400px;
-      max-width: 800px;
-      border: none;
-      margin-top: 20px;
-    }
-    .button {
-      background-color: #f0b800;
-      color: #000;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 25px;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .disclaimer {
-      font-size: 12px;
-      color: #ccc;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE TENTH - فيلم العاشرة</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <h1>🎬 فيلم العاشرة – THE TENTH</h1>
-  <p>فيلم رعب قصير... يطرح تساؤلات نفسية واجتماعية في قالب مرعب</p>
-
-  <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" allowfullscreen></iframe>
-
-  <div>
-    <a href="https://buymeacoffee.com/asem.almoshrea" target="_blank" class="button">❤️ ادعم صانع الفيلم</a>
-  </div>
-
-  <div class="disclaimer">
-    <strong>إخلاء مسؤولية:</strong> الدعم في هذه الصفحة هو دعم طوعي للفن والمحتوى الصوري، وليس مقابل سلعة أو خدمة.
-  </div>
-
+    <div class="container">
+        <h1>🎬 THE TENTH - فيلم العاشرة</h1>
+        <p class="description">فيلم رعب قصير... يطرح تساؤلات نفسية واجتماعية في قالب مرعب</p>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="buttons">
+            <a href="https://buymeacoffee.com/asem.almoshrea" class="button support">❤️ ادعم صانع الفيلم</a>
+            <a href="https://www.instagram.com/asem.almoshrea/" class="button follow">📸 تابع المخرج</a>
+            <a href="https://x.com/intent/tweet?text=شاهد+فيلم+العاشرة+الآن+https://youtu.be/oa9dihhaUFs" class="button share">💀 شارك على X</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://youtu.be/oa9dihhaUFs" class="button share">👻 شارك على فيسبوك</a>
+        </div>
+        <div class="disclaimer">
+            <input type="checkbox" id="disclaimerCheck">
+            <label for="disclaimerCheck" onclick="alert('إخلاء المسؤولية: الدعم في هذه الصفحة هو دعم طوعي للفن والمحتوى المرئي، وليس مقابل سلعة أو خدمة.')">
+                إخلاء مسؤولية
+            </label>
+        </div>
+    </div>
 </body>
 </html>
+    
