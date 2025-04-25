@@ -1,54 +1,44 @@
 
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: url('assets/halloween.gif') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
-    text-align: center;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-image: url('assets/halloween-6880.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  text-align: center;
 }
 
 .container {
-    background-color: rgba(0, 0, 0, 0.8);
-    margin: 2em auto;
-    padding: 2em;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 50px auto;
 }
 
-h1 {
-    color: red;
-    font-size: 2em;
+.video-wrapper {
+  margin: 20px 0;
 }
 
-.description {
-    margin-bottom: 1em;
+.buttons a {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: gold;
+  color: black;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
 }
 
-.video-container iframe {
-    width: 100%;
-    height: 400px;
-    border-radius: 10px;
-}
-
-.buttons {
-    margin: 1em 0;
-}
-
-.button {
-    background: gold;
-    color: black;
-    padding: 0.7em 1.5em;
-    margin: 0.3em;
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    box-shadow: 2px 2px 8px black;
+.buttons a:hover {
+  background-color: orangered;
+  color: white;
 }
 
 .disclaimer {
-    margin-top: 1em;
+  margin-top: 20px;
 }
-    
