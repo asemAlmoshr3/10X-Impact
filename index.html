@@ -1,37 +1,80 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>THE TENTH</title>
+  <meta name="description" content="فيلم العاشرة - THE TENTH: فيلم رعب قصير يطرح تساؤلات نفسية واجتماعية في قالب مرعب." />
+  <meta property="og:image" content="مو%20كل%20اللي%20جنبك%20بشر.jpg" />
+  <title>فيلم العاشرة - THE TENTH</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background-image: url('halloween-6880.gif');
+      background-size: cover;
+      background-attachment: fixed;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+    h1 {
+      color: #ff0033;
+      text-shadow: 0 0 8px black;
+    }
+    button {
+      background-color: gold;
+      border: none;
+      border-radius: 5px;
+      padding: 10px 15px;
+      margin: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: darkorange;
+    }
+    .disclaimer {
+      margin-top: 10px;
+      font-size: 12px;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
-  <h1>📽️ فيلم الرعب: <span style="color:red">THETENTH</span></h1>
-  <div class="video-container">
+  <div class="container">
+    <h1>
+      🎬 فيلم الرعب: <span style="color:white">THETENTH</span>
+    </h1>
+    <p>فيلم رعب قصير... يطرح تساؤلات نفسية واجتماعية في قالب مرعب</p>
+
     <iframe width="560" height="315" src="https://www.youtube.com/embed/oa9dihhaUFs" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+
+    <div>
+      <button onclick="window.open('https://buymeacoffee.com/asem.almoshrea')">❤️ ادعم صانع الفيلم</button>
+      <button onclick="alert('الفيلم يحكي عن رجل يواجه كوابيسه الحقيقية...')">🔥 احكِ لي عن الفيلم</button>
+      <button onclick="alert('كم تقييمك من 10؟')">🔥 قيّم رعب الفيلم</button>
+      <button onclick="window.open('https://x.com/intent/tweet?text=شاهدوا+فيلم+العاشرة+المرعب!+https://asemalmoshr3.github.io/THETENTH/')">👻 شارك على X (تويتر سابقًا)</button>
+      <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://asemalmoshr3.github.io/THETENTH/')">👻 شارك الرعب على فيسبوك</button>
+      <button onclick="window.open('https://instagram.com/asem.almoshrea')">📸 تابع المخرج</button>
+    </div>
+
+    <div style="margin-top: 15px;">
+      <input type="checkbox" id="disclaimerCheck" onclick="showDisclaimer()" checked>
+      <label for="disclaimerCheck">إخلاء مسؤولية</label>
+    </div>
+    <p class="disclaimer">الدعم في هذه الصفحة هو دعم طوعي للفن والمحتوى البصري، وليس مقابل سلعة أو خدمة.</p>
   </div>
-  <div class="buttons">
-    <button onclick="shareOnFacebook()">👻 شارك الرعب على فيسبوك</button>
-    <button onclick="shareOnX()">🧛‍♂️ شارك على X (تويتر سابقًا)</button>
-    <button onclick="alert('شكراً على تقييمك!')">🩸 قيّم رعب الفيلم</button>
-    <button onclick="alert('الفيلم مستوحى من أحداث نفسية مرعبة 🎬')">🩸 عطني عن الفيلم</button>
-    <button onclick="alert('تم ❤️ شكراً لدعمك!')">❤️ ادعم صانع الفيلم</button>
-  </div>
-  <div class="footer">
-    👁️ عدد الزوار: <span id="counter">17</span><br />
-    ❤️ عاصم يحب أليتا
-  </div>
+
   <script>
-    function shareOnFacebook() {
-      const url = encodeURIComponent(window.location.href);
-      const text = encodeURIComponent("شاهد فيلم العاشرة 🎬 فيلم رعب يعطيك إحساس مختلف! #العاشرة https://youtu.be/oa9dihhaUFs");
-      window.open("https://www.facebook.com/sharer/sharer.php?u=" + url + "&quote=" + text, "_blank");
-    }
-    function shareOnX() {
-      const text = encodeURIComponent("شاهد فيلم العاشرة 🎬 فيلم رعب يعطيك إحساس مختلف! #العاشرة https://youtu.be/oa9dihhaUFs");
-      window.open("https://twitter.com/intent/tweet?text=" + text, "_blank");
+    function showDisclaimer() {
+      alert("الدعم عبر هذا الموقع هو دعم طوعي للفن ولا يُعد مقابلاً لخدمة أو منتج، ولا يترتب عليه أي التزام قانوني.");
     }
   </script>
 </body>
