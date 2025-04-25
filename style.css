@@ -1,49 +1,92 @@
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Tajawal', sans-serif;
-  text-align: center;
-  background-image: url('assets/halloween-6880.gif');
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
-h1 {
-  margin-top: 20px;
-  text-shadow: 2px 2px 5px red;
-}
-
-.video-container {
-  margin-top: 20px;
-  box-shadow: 0 0 15px red;
-  display: inline-block;
-}
-
-.buttons {
-  margin-top: 20px;
-}
-
-button {
-  margin: 8px;
-  padding: 10px 18px;
-  font-size: 16px;
-  border: none;
-  border-radius: 6px;
-  background-color: #ffcc00;
-  color: black;
-  cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-  transition: transform 0.2s;
-}
-
-button:hover {
-  transform: scale(1.05);
-  background-color: #ff9900;
-}
-
-.footer {
-  margin-top: 20px;
-  font-size: 16px;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="THE TENTH - فيلم العاشرة">
+  <meta property="og:description" content="فيلم رعب قصير يطرح تساؤلات نفسية واجتماعية في قالب مرعب.">
+  <meta property="og:image" content="https://asemalmoshr3.github.io/THETENTH/مو%20كل%20اللي%20جنبك%20بشر.jpg">
+  <meta property="og:url" content="https://asemalmoshr3.github.io/THETENTH/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://asemalmoshr3.github.io/THETENTH/مو%20كل%20اللي%20جنبك%20بشر.jpg">
+  <title>فيلم العاشرة - THE TENTH</title>
+  <style>
+    body {
+      background: url('https://asemalmoshr3.github.io/THETENTH/halloween-6880.gif') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.75);
+      margin: 3em auto;
+      padding: 2em;
+      border-radius: 15px;
+      width: 90%;
+      max-width: 720px;
+    }
+    h1 {
+      color: #ff3333;
+      margin-bottom: 0;
+    }
+    .desc {
+      font-size: 14px;
+      color: #ddd;
+    }
+    iframe {
+      width: 100%;
+      height: 360px;
+      border-radius: 10px;
+      margin-top: 1em;
+    }
+    .buttons {
+      margin-top: 1.5em;
+    }
+    .buttons a {
+      display: inline-block;
+      background-color: #444;
+      color: #ffcc00;
+      padding: 10px 18px;
+      margin: 8px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .buttons a:hover {
+      background-color: #666;
+    }
+    .checkbox {
+      margin-top: 1.5em;
+      color: #ccc;
+      font-size: 14px;
+    }
+    .checkbox input {
+      transform: scale(1.3);
+      margin-left: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>THE TENTH - <span style="color:#f33">فيلم العاشرة</span> 🎬</h1>
+    <p class="desc">فيلم رعب قصير... يطرح تساؤلات نفسية واجتماعية في قالب مرعب</p>
+    <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" frameborder="0" allowfullscreen></iframe>
+    <div class="buttons">
+      <a href="https://buymeacoffee.com/asem.almoshrea" target="_blank">❤️ ادعم صانع الفيلم</a>
+      <a href="https://www.instagram.com/asem.almoshrea" target="_blank">📸 تابع المخرج</a>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=https://asemalmoshr3.github.io/THETENTH/" target="_blank">👻 شارك على فيسبوك</a>
+      <a href="https://x.com/intent/tweet?url=https://asemalmoshr3.github.io/THETENTH/&text=شاهد+فيلم+العاشرة+الآن" target="_blank">☠️ غرد على X</a>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" onclick="alert('الدعم في هذه الصفحة هو دعم طوعي للفن والمحتوى البصري، وليس مقابل سلعة أو خدمة.')" checked>
+        إخلاء مسؤولية
+      </label>
+    </div>
+  </div>
+</body>
+</html>
