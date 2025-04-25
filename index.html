@@ -59,16 +59,23 @@
       transition: box-shadow 0.4s ease-in-out;
     }
 
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
     button {
       background-color: gold;
       border: none;
       border-radius: 5px;
       padding: 12px 18px;
-      margin: 6px;
       font-weight: bold;
       font-size: 1em;
       cursor: pointer;
       transition: background-color 0.3s ease;
+      min-width: 140px;
     }
 
     button:hover {
@@ -90,12 +97,12 @@
 
     <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" title="YouTube video player" allowfullscreen></iframe>
 
-    <div>
+    <div class="button-group">
       <button onclick="window.open('https://buymeacoffee.com/asem.almoshrea')">❤️ ادعم صانع الفيلم</button>
-      <button onclick="alert('الفيلم يحكي عن رجل يواجه كوابيسه الحقيقية...')">🔥 احكِ لي عن الفيلم</button>
-      <button onclick="alert('شكرا على دعمك وتقييمك ')">🔥 قيّم رعب الفيلم</button>
-      <button onclick="window.open('https://x.com/intent/tweet?text=شاهدوا+فيلم+العاشرة+المرعب!+https://asemalmoshr3.github.io/THETENTH/')">👻 شارك على X (تويتر سابقًا)</button>
-      <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://asemalmoshr3.github.io/THETENTH/')">👻 شارك الرعب على فيسبوك</button>
+      <button onclick="alert('الفيلم يحكي عن رجل يواجه كوابيسه الحقيقية...')">🔥 عن الفيلم</button>
+      <button onclick="alert('شكرا على تقييمك ودعمك ')">⭐ قيّم الفيلم</button>
+      <button onclick="window.open('https://x.com/intent/tweet?text=شاهدوا+فيلم+العاشرة+المرعب!+https://asemalmoshr3.github.io/THETENTH/')">🔁 شارك على X</button>
+      <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=https://asemalmoshr3.github.io/THETENTH/')">📘 شارك على فيسبوك</button>
       <button onclick="window.open('https://instagram.com/asem.almoshrea')">📸 تابع المخرج</button>
     </div>
 
