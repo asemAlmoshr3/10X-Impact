@@ -1,55 +1,59 @@
+
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>فيلم الرعب: THETENTH</title>
-  <link rel="stylesheet" href="style.css" />
-  <script>
-    function shareOnFacebook() {
-      const text = encodeURIComponent("شاهد فيلم العاشرة 🎬 فيلم يعطيك إحساس مختلف! #العاشرة");
-      const url = encodeURIComponent("https://youtu.be/oa9dihhaUFs");
-      const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`;
-      window.open(facebookUrl, "_blank");
+  <title>فيلم العاشرة | THE TENTH</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Tajawal', sans-serif;
+      text-align: center;
+      padding: 20px;
     }
-
-    function shareOnX() {
-      const text = encodeURIComponent("شاهد فيلم العاشرة 🎬 فيلم يعطيك إحساس مختلف! #العاشرة");
-      const url = encodeURIComponent("https://youtu.be/oa9dihhaUFs");
-      const xUrl = `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
-      window.open(xUrl, "_blank");
+    iframe {
+      width: 90%;
+      height: 400px;
+      max-width: 800px;
+      border: none;
+      margin-top: 20px;
     }
-
-    function supportCreator() {
-      alert("شكرًا لدعمك لصانع الفيلم! ❤️");
+    .button {
+      background-color: #f0b800;
+      color: #000;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 25px;
+      text-decoration: none;
+      display: inline-block;
     }
-
-    function rateHorror() {
-      alert("تم تسجيل تقييمك! 🩸");
+    .disclaimer {
+      font-size: 12px;
+      color: #ccc;
+      margin-top: 20px;
     }
-
-    function screamAboutIt() {
-      alert("صرخة رعب أُطلقت! 😱");
-    }
-  </script>
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>🎬 <span style="color:red">فيلم الرعب:</span> <span style="color:#ff0000">THETENTH</span></h1>
 
-    <div class="video">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/oa9dihhaUFs" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-    </div>
+  <h1>🎬 فيلم العاشرة – THE TENTH</h1>
+  <p>فيلم رعب قصير... يطرح تساؤلات نفسية واجتماعية في قالب مرعب</p>
 
-    <div class="buttons">
-      <button onclick="shareOnFacebook()">👻 شارك الرعب على فيسبوك</button>
-      <button onclick="shareOnX()">🩸 شارك على X (تويتر سابقًا)</button>
-      <button onclick="rateHorror()">🩸 قيّم رعب الفيلم</button>
-      <button onclick="screamAboutIt()">🧟‍♂️ صرّخ عن الفيلم</button>
-      <button onclick="supportCreator()">❤️ ادعم صانع الفيلم</button>
-    </div>
+  <iframe src="https://www.youtube.com/embed/oa9dihhaUFs" allowfullscreen></iframe>
 
-    <p class="footer">👁️‍🗨️ عدد الزوار: <span id="visitor-count">95</span><br />❤️ عاصم يحب اليتا</p>
+  <div>
+    <a href="https://buymeacoffee.com/asem.almoshrea" target="_blank" class="button">❤️ ادعم صانع الفيلم</a>
   </div>
+
+  <div class="disclaimer">
+    <strong>إخلاء مسؤولية:</strong> الدعم في هذه الصفحة هو دعم طوعي للفن والمحتوى الصوري، وليس مقابل سلعة أو خدمة.
+  </div>
+
 </body>
 </html>
