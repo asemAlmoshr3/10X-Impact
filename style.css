@@ -1,49 +1,49 @@
 
 body {
-  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  color: white;
-  background: url('halloween-6880.gif') no-repeat center center fixed;
-  background-size: cover;
-}
-.container {
-  background-color: rgba(0, 0, 0, 0.8);
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 20px;
-  border-radius: 15px;
+  font-family: 'Tajawal', sans-serif;
   text-align: center;
-}
-h1 {
+  background-image: url('assets/halloween-6880.gif');
+  background-size: cover;
+  background-position: center;
   color: white;
 }
-.red {
-  color: red;
+
+h1 {
+  margin-top: 20px;
+  text-shadow: 2px 2px 5px red;
 }
-.video {
-  margin: 20px 0;
-}
-.buttons a {
+
+.video-container {
+  margin-top: 20px;
+  box-shadow: 0 0 15px red;
   display: inline-block;
-  margin: 8px;
-  padding: 10px 15px;
-  background-color: #ffcc00;
-  color: black;
-  text-decoration: none;
-  border-radius: 8px;
 }
-.buttons a:hover {
-  background-color: #ff9900;
-}
-.disclaimer {
+
+.buttons {
   margin-top: 20px;
 }
-#disclaimerText {
-  display: none;
-  font-size: 14px;
-  margin-top: 10px;
+
+button {
+  margin: 8px;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffcc00;
+  color: black;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
 }
-#disclaimerToggle:checked + label + #disclaimerText {
-  display: block;
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #ff9900;
+}
+
+.footer {
+  margin-top: 20px;
+  font-size: 16px;
 }
